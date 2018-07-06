@@ -1,0 +1,14 @@
+<!-- Menu file for `activity_movies.xml` is located in a file
+     such as `res/menu/menu_movies.xml`  -->
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/miCompose"
+        android:icon="@drawable/vector_compose_fab"
+        android:title="Compose"
+        app:showAsAction="ifRoom|withText"
+        android:onClick="onComposeAction">
+    </item>
+</menu>
