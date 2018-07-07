@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="5dp"
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
@@ -22,7 +23,7 @@
 
     <TextView
         android:id="@+id/tvBody"
-        android:layout_width="wrap_content"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ivProfileImage"
         android:layout_below="@+id/tvUserName"
@@ -31,12 +32,54 @@
         android:text="TextView" />
 
     <TextView
-            android:id="@+id/tvTimestamp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:layout_toEndOf="@+id/tvUserName"
-            android:text="TextView"
-            android:textColor="@android:color/darker_gray" />
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toEndOf="@+id/tvUserName"
+        android:text="TextView"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvRetweets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/ibRetweet"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/iBLike"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/ibRetweet"
+        android:layout_width="27dp"
+        android:layout_height="18dp"
+        android:layout_alignStart="@+id/tvBody"
+        android:layout_below="@+id/tvBody"
+        android:maxHeight="14dp"
+        android:maxWidth="14dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_vector_retweet"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/iBLike"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/tvRetweets"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_vector_heart_stroke"
+        tools:ignore="VectorDrawableCompat" />
 </RelativeLayout>
